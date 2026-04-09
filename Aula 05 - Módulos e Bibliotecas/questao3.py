@@ -1,0 +1,6 @@
+##Você deve criar um script chamado bibliotecas_externas.py que resolva as seguintes tarefas. O objetivo é aprender a instalar, importar e utilizar bibliotecas externas em projetos Python. Requisitos: Crie um amabiente virtual com o venv. Logo em seguida instale as bibliotecas pedidas nesse ambiente virtual criado e execute o script nele. No terminal, crie um ambiente virtual chamado venv: python -m venv venv Ative o ambiente virtual: Windows: venv\Scripts\activate Mac/Linux: source venv/bin/activate Após ativar, verifique se o Python do ambiente virtual está sendo usado: python --version Instalação de bibliotecas Instale as bibliotecas requests e pandas usando o pip. Usando requests Faça uma requisição HTTP GET para a URL: https://www.omdbapi.com/?t=Titanic&apikey=2e4b44b2 Exiba o resultado em formato JSON na tela. Usando pandas Crie um dicionário com os seguintes dados: {"Nome": ["Ana", "João", "Maria"], "Idade": [20, 25, 30]} Converta o dicionário em um DataFrame e exiba na tela. Manipulação simples com pandas Adicione uma nova coluna chamada "Cidade" com os valores: ["São Paulo", "Rio de Janeiro", "Belo Horizonte"] Exiba o DataFrame atualizado.
+import requests 
+filme = input("Digite o nome do filme: ")
+requisicao = requests.get(f"https://www.omdbapi.com/?t={filme}&apikey=2e4b44b2")
+resposta = requisicao.json()
+print(resposta)
