@@ -1,0 +1,12 @@
+##Contexto: O setor de Recursos Humanos de uma startup precisa calcular a folha de pagamento de diferentes tipos de prestadores de serviço.Instruções:
+
+
+#Herança: Crie uma classe base chamada Prestador. O construtor deve receber o nome do profissional. Essa classe deve ter um método chamado calcular_ganhos que retorna 0.0.
+
+#Polimorfismo:
+
+#Crie uma subclasse chamada Diarista que herda de Prestador. Seu construtor deve receber o nome, a quantidade_dias trabalhados e o valor_dia. Reescreva (override) o método calcular_ganhos para retornar a multiplicação dos dias pelo valor do dia.
+
+#Crie outra subclasse chamada Mensalista que herda de Prestador. Seu construtor deve receber o nome e o salario_fixo. Reescreva o método calcular_ganhos para retornar o valor do salário fixo.
+
+#Execução e Comparação: No código principal, crie uma lista contendo um objeto Diarista (ex: 5 dias a R$ 200/dia) e um objeto Mensalista (ex: R$ 4500 fixo). Percorra essa lista usando um loop for e, de forma polimórfica, chame o método calcular_ganhos de cada um, exibindo o nome do profissional e o valor final que ele deve receber.
